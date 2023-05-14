@@ -4,15 +4,132 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Download Application Copy</title>
+        <script>
+          // show loader animation on page load
+          document.addEventListener('DOMContentLoaded', function() {
+              document.getElementById("loader").style.display = "block";
+          });
+          
+          // hide loader animation when the page is fully loaded
+          window.addEventListener('load', function() {
+              document.getElementById("loader").style.display = "none";
+          });
+    </script>
+
+    <script>
+    window.onload = function() {
+      alert("সঠিক ভাবে প্রিন্ট/ডাউনলোড করতে নিচের Download/Print বাটনে ক্লিক করুন, ধন্যবাদ");
+    }
+    </script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.maateen.me/kalpurush/font.css" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="style.css" /> -->
   </head>
+  <style>
+
+    @import url('https://fonts.maateen.me/kalpurush/font.css');
+
+
+    body {
+  margin: 0;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  /* background-image: url("https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; */
+}
+
+@media screen and (max-width: 767px) {
+  #top img {
+    /* border: 20px solid green; */
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .text h1 {
+    color: red;
+    font-weight: 400;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .othertext h1 {
+    color: red;
+    font-weight: 400;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tableTop {
+    color: red;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tableBody {
+    color: red;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sigItems {
+    color: red;
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+ #loader {
+			border: 16px solid #f3f3f3; /* Light grey */
+			border-top: 16px solid #3498db; /* Blue */
+			border-radius: 50%;
+			width: 120px;
+			height: 120px;
+			animation: spin 2s linear infinite;
+			margin: auto;
+			margin-top: 50px;
+			display: none; /* initially hidden */
+      position: relative;
+		}
+        
+    #loader p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin: 0;
+      padding: 0;
+      }
+
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+      
+    </style>
   <body>
     <section id="top">
       <div class="container">
@@ -32,9 +149,12 @@
               <address>Chakaria, Cox's Bazar</address>
             </div>
             <div class="othertext">
-              <h1 style="text-align: center">JSC Online Registration - 2023</h1>
+              <h2 style="text-align: center">JSC Online Registration - 2023</h2>
               <h3>Application Copy</h3>
             </div>
+          </div>
+          <div id="loader">
+              <p>Loading...</p>
           </div>
         </div>
       </div>
@@ -53,77 +173,97 @@
         <thead >
           <tr >
             <th style="width: 120px;">Class:</th>
-            <th >Eight</th>
+            <th id="cclass" >EIGHT</th>
             <th style="width: 120px;">Class Roll: </th>
-            <th >121</th>
+            <th id="roll"></th>
             <th style="width: 120px;">Section:</th>
-            <th >A</th>
+            <th id="section"></th>
             <th style="width: 120px;">Student ID</th>
-            <th >20182254</th>
+            <th id="stId"></th>
           </tr>
         </thead>
-        <thead>
+
+       </table>
+        <table class="tableTop mt-4 table table-bordered align-center">
+                <thead>
           <tr>
             <th style="width: 200px;">Student's Name</th>
             <th style="width: 5px;">:</th>
-            <th colspan="7">Chandrika Shorma</th>
+            <th id="stName" colspan="7"></th>
           </tr>
           <tr>
             <th style="width: 230px;">Birth Certificate No.</th>
             <th style="width: 5px;">:</th>
-            <th style="width: 200px;">20051914584547474</th>
+            <th id="cNo"style="width: 200px;"></th>
             <th style="width: 150px;">Date Of Birth</th>
             <th style="width: 5px;">:</th>
-            <th colspan="4">15/14/2005</th>
+            <th id="bdob" colspan="4"></th>
           </tr>
           <tr>
             <th style="width: 230px;">Gender</th>
             <th style="width: 5px;">:</th>
-            <th style="width: 200px;">Female</th>
+            <th id="gender" style="width: 200px;"></th>
             <th style="width: 150px;">Religion</th>
             <th style="width: 5px;">:</th>
-            <th colspan="4">Hindu </th>
+            <th id="religion" colspan="4"> </th>
           </tr>
           <th style="width: 230px;">Mobile No.</th>
           <th style="width: 5px;">:</th>
-          <th colspan="7" style="width: 200px;">+8801864769361</th>
+          <th id="mobile" colspan="7" style="width: 200px;"></th>
           <tr>
             <th style="width: 200px;">Father's Name</th>
             <th style="width: 5px;">:</th>
-            <th colspan="7">Mrinal Shorma</th>
+            <th id="fName" colspan="7"></th>
           </tr>
           <tr>
             <th style="width: 230px;">National ID No.</th>
             <th style="width: 5px;">:</th>
-            <th  colspan="7"style="width: 200px;">20051914584547474</th>
+            <th id="fNidNo" colspan="7"style="width: 200px;"></th>
 
           </tr>
           <tr>
             <th style="width: 200px;">Mother's Name</th>
             <th style="width: 5px;">:</th>
-            <th colspan="7">Rupna Bala Shorma</th>
+            <th id="mName"colspan="7"></th>
           </tr>
           <tr>
             <th style="width: 230px;">National ID No.</th>
             <th style="width: 5px;">:</th>
-            <th colspan="7" style="width: 200px;">20051914584547474</th>
+            <th id="mNidNo" colspan="7" style="width: 200px;"></th>
 
           </tr>
           <tr>
             <th style="width: 230px;">District</th>
             <th style="width: 5px;">:</th>
-            <th style="width: 200px;">Cox's Bazar</th>
+            <th id="dist" style="width: 200px;"></th>
             <th style="width: 150px;">Police Station</th>
             <th style="width: 5px;">:</th>
-            <th colspan="4">Chakaria  </th>
+            <th id="upazila" colspan="4">  </th>
           </tr>
         </thead>
-       </table>
-
-       <p>উপরোক্ত সকল তথ্য সঠিক, কোন তথ্য ভুল হলে বিদ্যালয় কর্তৃপক্ষ দায়ি থাকবে না</p>
+        </table>
+        <table>
+        <thead >
+          <tr >
+            <th style="width: 210px;">Submission Date&Time is:</th>
+            <th id="time"></th>
+          </tr>
+        </thead>
+        </table><br>
+       <p style="text-align: center;"><span style="color: rgb(73, 24, 248); font-size: 25px; font-family: 'Kalpurush', sans-serif;
+        ">অঙ্গীকারনামাঃ</span> <span style="color: rgb(248, 50, 24); font-family: 'Kalpurush', sans-serif; font-size: 25px;">আমি উপরোক্ত সকল তথ্য সঠিক দিয়েছি, কোন তথ্য ভুল হলে বিদ্যালয় কর্তৃপক্ষ দায়ি থাকবে না</span></p><br><br>
  
+        <table class="sigItems">
+        <thead class="align-center">
+          <tr >
+            <th style="width: 250px;">Signature of Student</th>
+            <th style="width: 250px;">Signature of Guardian</th>
+            <th style="width: 240px;">Signature of Class Teacher</th>
+          </tr>
+        </thead>
+        </table><br>
        <div class="container" style="text-align: right;">
-        <button class="btn btn-success ">Download / Print</button>
+        <button class="btn btn-success" onclick="printPage()">Download / Print</button>
 
        </div>
     </section>
@@ -138,5 +278,68 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function searchData() {
+        var code = document.getElementById("code").value;
+        google.script.run.withSuccessHandler(showData).searchData(code);
+      }
+        
+      function showData(data) {
+        var cclass = document.getElementById("time");
+        var roll = document.getElementById("roll");
+        var section = document.getElementById("section");
+        var stId = document.getElementById("stId");
+        var stName = document.getElementById("stName");
+        var cNo = document.getElementById("cNo");
+        var bdob = document.getElementById("bdob");
+        var gender = document.getElementById("gender");
+        var religion = document.getElementById("religion");
+        var mobile = document.getElementById("mobile");
+        var fName = document.getElementById("fName");
+        var fNidNo = document.getElementById("fNidNo");
+        var mName = document.getElementById("mName");
+        var mNidNo = document.getElementById("mNidNo");
+        var dist = document.getElementById("dist");
+        var upazila = document.getElementById("upazila");
+
+      
+
+  
+        if (data.length > 0) {
+          time.innerHTML = data[0][0];
+          roll.innerHTML = data[0][1];
+          section.innerHTML = data[0][3];
+          stId.innerHTML = data[0][2];
+          stName.innerHTML = data[0][4];
+          cNo.innerHTML = data[0][5];
+          bdob.innerHTML = data[0][11];
+          gender.innerHTML = data[0][13];
+          religion.innerHTML = data[0][10];
+          mobile.innerHTML = data[0][12];
+          fName.innerHTML = data[0][6];
+          fNidNo.innerHTML = data[0][7];
+          mName.innerHTML = data[0][8];
+          mNidNo.innerHTML = data[0][9];
+          dist.innerHTML = data[0][14];
+          upazila.innerHTML = data[0][15];
+
+  
+        } else {
+          datanotfound.innerHTML = "Sorry, No data found.";
+          // stNameEng.innerHTML = "Hello";
+          // region.innerHTML = "";
+          // city.innerHTML = "";
+          // date.innerHTML = "";
+          // timestamp.innerHTML = "No data found.";
+        }
+      }
+      function printPage() {
+        window.print();
+      }
+
+
+
+
+    </script>
   </body>
 </html>
